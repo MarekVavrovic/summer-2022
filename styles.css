@@ -1554,6 +1554,7 @@ CAROUSEL
 
 
 .container {
+  display: none;
   min-height: 90vh;
   position: relative;
   width: 320px;
@@ -1699,3 +1700,13 @@ CAROUSEL
  
   }
 }
+
+@media screen and (min-width: 1500px) {
+  .container {
+ display: block; 
+     perspective:2500px;
+  margin: 200px auto -350px auto;
+  
+  }
+}
+

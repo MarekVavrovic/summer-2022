@@ -470,7 +470,6 @@ Navbar
   .nav-links a {
     text-transform: capitalize;
     color: #000000;
-
     text-shadow: 0.5px 0.5px 0 #bcbcbc, 2px 2px 0 #9c9c9c;
     letter-spacing: 2px;
     -webkit-transition: var(--transition);
@@ -1526,4 +1525,133 @@ scroll to top
   cursor: pointer;
 }
 
+/*
+--------------------------------
+CAROUSEL
+--------------------------------
+*/
+.container-bgr{
+background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662902768/samples/temp/carousel/giphy_4_uhgb8w.gif");
 
+background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  /*animation property*/
+  /*overflow-x: hidden will stop the navbar to pop up during text animation*/
+  overflow: hidden;
+
+  
+} 
+
+.container {
+  min-height: 90vh;
+  position: relative;
+  width: 320px;
+  margin:250px auto -450px auto;
+  perspective:1500px;
+ 
+  
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 60s infinite forwards linear;
+
+}
+.carousel__face { 
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  display: flex;
+  opacity: 0.95;
+ 
+}
+
+.carousel__face:hover{
+    box-shadow:inset 0 0 ;
+    opacity: 1;
+}
+.carousel-link{
+  margin: auto;
+  font-size: 2rem;
+   color: #fffdfd;
+    text-shadow: 0.5px 0.5px 0 #171616, 2px 2px 0 #323030;
+    letter-spacing: 9px;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+  font-family: "PP Hatton Light";
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+
+
+.carousel__face:nth-child(1) {
+  background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662842684/samples/temp/carousel/d1_ukc7pb.jpg");
+  transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) { 
+  background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662842686/samples/temp/carousel/s2_wdwzyl.jpg");
+    transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+  background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662842685/samples/temp/carousel/e1_ntmmu1.jpg");
+  transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+  background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662842686/samples/temp/carousel/v2_yjhkzk.jpg");
+  transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) { 
+  background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662842683/samples/temp/carousel/o_iexnrn.jpg");
+ transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) { 
+  background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662842683/samples/temp/carousel/d2_bpi6lz.jpg");
+ transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) { 
+  background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662842686/samples/temp/carousel/s1_dgo8z3.jpg");
+ transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+  background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662842683/samples/temp/carousel/e2_mtfwsr.jpg");
+  transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+  background-image: url("https://res.cloudinary.com/diaagpm3o/image/upload/v1662842685/samples/temp/carousel/v1_qfvfyb.jpg");
+  transform: rotateY(320deg) translateZ(430px); }
+
+
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    perspective:1400px ;
+    margin:300px auto -350px auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+   perspective: 1500px;
+   margin:350px auto -350px auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+  perspective:2500px;
+  margin: 200px auto -350px auto;
+ 
+  }
+}
